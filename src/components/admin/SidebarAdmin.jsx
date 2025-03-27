@@ -18,7 +18,7 @@ const SidebarAdmin = () => {
         className="h-24 bg-gray-900 flex items-center
       justify-center text-2xl font-bold"
       >
-        Admin Panel
+        Admin
       </div>
 
       

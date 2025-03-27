@@ -80,53 +80,8 @@ const TableOrders = () => {
   };
 
   return (
-    <div className="container mx-auto p-4 bg-white shadow-md rounded-lg">
-      <h2 className="text-3xl font-semibold text-gray-700 mb-4 text-center">Dashboard: Order Management</h2>
-      
-      {/* Date Picker for selecting a date */}
-      <div className="mb-6">
-        <DatePicker
-          selected={selectedDate}
-          onChange={(date) => setSelectedDate(date)} // เปลี่ยนวันที่ที่เลือก
-          dateFormat="dd/MM/yyyy"
-          className="border border-gray-300 rounded-md px-3 py-2"
-          placeholderText="Select a date"
-        />
-      </div>
-      
-      {/* Dashboard Overview Section */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-        <div className="bg-blue-100 p-4 rounded-lg shadow">
-          <h3 className="text-lg font-medium text-blue-700">Total Orders</h3>
-          <p className="text-xl font-semibold text-blue-900">{filteredOrders.length}</p>
-        </div>
-        <div className="bg-green-100 p-4 rounded-lg shadow">
-          <h3 className="text-lg font-medium text-green-700">Completed Orders</h3>
-          <p className="text-xl font-semibold text-green-900">{filteredOrders.filter(order => order.orderStatus === "Completed").length}</p>
-        </div>
-        <div className="bg-red-100 p-4 rounded-lg shadow">
-          <h3 className="text-lg font-medium text-red-700">Cancelled Orders</h3>
-          <p className="text-xl font-semibold text-red-900">{filteredOrders.filter(order => order.orderStatus === "Cancelled").length}</p>
-        </div>
-        <div className="bg-yellow-100 p-4 rounded-lg shadow">
-          <h3 className="text-lg font-medium text-yellow-700">Total Amount</h3>
-          <p className="text-xl font-semibold text-yellow-900">{numberFormat(totalOrderAmount)}</p>
-        </div>
-      </div>
+    <div>Dashboard</div>
+  )
+}
 
-      {/* Sold Products Graph */}
-      <div className="bg-gray-50 p-4 rounded-lg shadow mb-6">
-        <h3 className="text-lg font-medium text-gray-700">Sold Products on {selectedDate ? selectedDate.toLocaleDateString("en-GB") : "Select a Date"}</h3>
-        <Bar data={chartData} options={{ responsive: true }} />
-      </div>
-
-      {/* Order Table Section - Show orders based on selected date */}
-      <div className="bg-gray-50 p-4 rounded-lg shadow">
-        <p className="text-lg font-medium text-gray-700">Total Revenue from Orders</p>
-        <p className="text-xl font-semibold text-gray-900">{numberFormat(totalOrderAmount)}</p>
-      </div>
-    </div>
-  );
-};
-
-export default TableOrders;
+export default Dashboard

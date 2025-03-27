@@ -22,7 +22,7 @@ const ContentCarousel = () => {
         className="mySwiper h-80 object-cover rounded-md mb-4"
       >
         <SwiperSlide>
-          <img src="/c.png" alt="Custom Image" className="w-300px h-300px object-cover rounded-md" />
+          <img src="/c.png" alt="Custom Image" className="w-300px h-700px object-cover rounded-md" />
         </SwiperSlide>
       </Swiper>
     </div>

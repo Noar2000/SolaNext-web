@@ -14,7 +14,6 @@ const LoadingToRedirect = () => {
                 }
                 return currentCount - 1
             })
-
         }, 1000)
 
         return () => clearInterval(interval)
@@ -24,9 +23,24 @@ const LoadingToRedirect = () => {
         return <Navigate to={'/'} />
     }
 
+
+    
     return (
-        <div>No Permission, Redirect in {count}</div>
+        <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '100vh',
+            fontSize: '24px',
+            opacity: count % 2 === 0 ? 1 : 0.5,
+            transition: 'opacity 0.5s'
+        }}>
+            Loading...
+        </div>
     )
+    
+    
+    
 }
 
 export default LoadingToRedirect
